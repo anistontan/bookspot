@@ -1,0 +1,267 @@
+/*login page*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.main-header {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Bree Serif', serif; /* Bree Serif for 'BOOK' */
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.spot {
+    color: #1ed760; /* Green for 'spot' */
+    font-family: 'Kodemono', monospace; /* Kodemono for 'spot' */
+}
+
+.subtitle {
+    font-family: 'EB Garamond', serif; /* EB Garamond for subtitle */
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666; /* Dark grey color */
+    margin-top: 10px;
+}
+
+.login-button {
+    background-color: #1ed760; /* Green background */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Lalezar', sans-serif; /* Lalezar for button text */
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #1ed760; /* Same green on hover */
+}
+
+.description {
+    font-family: 'EB Garamond', serif; /* EB Garamond for description */
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #fff;
+}
+
+
+/* after login */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.main-header {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-family: 'Bree Serif', serif; /* Bree Serif for 'BOOK' */
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.spot {
+    color: #1ed760; /* Green for 'spot' */
+    font-family: 'Kodemono', monospace; /* Kodemono for 'spot' */
+}
+
+.subtitle {
+    font-family: 'EB Garamond', serif; /* EB Garamond for subtitle */
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666; /* Dark grey color */
+    margin-top: 10px;
+}
+
+.example-text {
+    font-family: 'Neuton', serif; /* Neuton for the example text */
+    font-size: 1.2rem;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: #fff; /* White text */
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.action-button {
+    background-color: #1ed760; /* Green background */
+    color: #fff; /* White text */
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Lalezar', sans-serif; /* Lalezar for button text */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Set a width for consistency */
+}
+
+.action-button:hover {
+    background-color: #1ed760; /* Same green on hover */
+}
+
+
+/* book recommendation page */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Playfair Display', serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.main-header {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-family: 'Bree Serif', serif;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.spot {
+    color: #00ff00;
+    font-family: 'Kodemono', monospace;
+}
+
+.subtitle {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.recommendation {
+    background-color: #222;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.book-cover {
+    width: 200px;
+    height: 300px;
+    background-color: #ccc;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+}
+
+.description {
+    flex-grow: 1;
+    text-align: left;
+}
+
+#book-title {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+.generate-button {
+    background-color: #00cc66;
+    color: #000;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.generate-button:hover {
+    background-color: #00994d;
+}
+
+.footer-text {
+    font-style: italic;
+    margin-top: 2rem;
+    color: #9edcbf;
+}
+
+/* Loading Overlay Styles */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-message {
+    font-size: 1.5rem;
+}
+
+

@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+
+.main-header {
+    margin-bottom: 50px;
+}
+
+.title {
+    font-family: 'Bree Serif', serif; /* Bree Serif for 'BOOK' */
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+.spot {
+    color: #00ff00; /* Green for 'spot' */
+    font-family: 'Kodemono', monospace; /* Kodemono for 'spot' */
+}
+
+.subtitle {
+    font-family: 'EB Garamond', serif; /* EB Garamond for subtitle */
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #666; /* Dark grey color */
+    margin-top: 10px;
+}
+
+.loading-container {
+    font-family: 'EB Garamond', serif; /* Matching font for consistency */
+    font-style: italic;
+    font-size: 1.5rem;
+    color: #fff; /* White text */
+}
