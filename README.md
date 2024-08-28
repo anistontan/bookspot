@@ -4,8 +4,6 @@ This project was built with Node.js, so it might not work as intended in all env
 
 **Note**: API keys are not included in this repository. Please make sure to add your own API keys in the `.env` file or the appropriate configuration before running the project.
 
-## Getting Started
-
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) installed on your machine
