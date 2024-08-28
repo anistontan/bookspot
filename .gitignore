@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Dependency directories
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS or IDE specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+
+# Build outputs
+dist/
+build/
+
+# Ignore specific config file
+secret-config.json
