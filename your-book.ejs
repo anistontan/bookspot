@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOOKspot - Your Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-message">
+            Loading your book recommendations...
+        </div>
+    </div>
+
+    <header class="main-header">
+        <h1 class="title">BOOK<span class="spot">spot</span></h1>
+        <p class="subtitle">by book & music lovers,<br> for book & music lovers</p>
+    </header>
+
+    <div class="recommendation">
+        <div class="book-cover" id="book-cover"></div>
+        <div class="description">
+            <h2 id="book-title">[title of book] by [author]</h2>
+            <p><strong>SHORT DESCRIPTION:</strong></p>
+            <p id="book-description">This is where the short description will be placed.</p>
+        </div>
+    </div>
+
+    <div class="footer-text">i think you'd really enjoy this!</div>
+
+    <button class="generate-button" onclick="generateNextBook()">Generate Another Book</button>
+
+    <script>
+        let currentBookIndex = 0;
+        let recommendations = [];
+    
+        function showLoadingOverlay() {
+            document.getElementById('loading-overlay').style.display = 'flex';
+        }
+    
+        function hideLoadingOverlay() {
+            document.getElementById('loading-overlay').style.display = 'none';
+        }
+
+        async function fetchRecommendations() {
+            try {
+                showLoadingOverlay();
+                const response = await fetch('/api/recommendations');
+                const data = await response.json();
+    
+                recommendations = data.recommendations; 
+                currentBookIndex = 0;
+                displayCurrentBook();
+            } catch (error) {
+                console.error('Error fetching recommendations:', error);
+                document.getElementById('book-description').textContent = 'Failed to fetch recommendations. Please try again.';
+            } finally {
+                hideLoadingOverlay();
+            }
+        }
+    
+        function displayCurrentBook() {
+            if (currentBookIndex < recommendations.length) {
+                const currentBook = recommendations[currentBookIndex];
+                document.getElementById('book-title').textContent = `${currentBook.title} by ${currentBook.author}`;
+                document.getElementById('book-description').textContent = currentBook.description;
+                document.getElementById('book-cover').style.backgroundImage = `url(${currentBook.coverUrl || 'https://i.ibb.co/Jqj1ch2/image.png'})`;
+            } else {
+                document.getElementById('book-title').textContent = '';
+                document.getElementById('book-description').textContent = 'No more recommendations available. Please refresh to get new recommendations.';
+                document.getElementById('book-cover').style.backgroundImage = 'none';
+            }
+        }
+    
+        function generateNextBook() {
+            currentBookIndex = (currentBookIndex + 1) % recommendations.length; 
+            displayCurrentBook(); 
+        }
+    
+        fetchRecommendations();
+    </script>
+</body>
+</html>
