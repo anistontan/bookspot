@@ -1,4 +1,4 @@
-# Bookspot
+# bookspot
 
 This project was built with Node.js, so it might not work as intended in all environments.
 
