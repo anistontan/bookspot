@@ -14,19 +14,25 @@ async function getBookRecommendations(topArtists, topGenres) {
     2. The author of the book.
     3. A brief description (under 50 words, no spoilers).
     Format your response as a JSON array with objects containing "title", "author", and "description" fields.
-    Please be classics or popular/decent booktok books. 
+    Please recommend classics or popular/decent BookTok books. 
     `;
 
     try {
         const completion = await openai.chat.completions.create({
-            model: "gpt-4",
+            model: "gpt-4o",
             messages: [
                 { role: "user", content: prompt }
             ]
         });
 
-        // Parse the response as JSON
-        const recommendations = JSON.parse(completion.choices[0].message.content.trim());
+        // Extract and clean up the response content
+        let responseContent = completion.choices[0].message.content.trim();
+
+        // Remove any Markdown code block formatting
+        responseContent = responseContent.replace(/```json|```/g, '');
+
+        // Parse the cleaned response as JSON
+        const recommendations = JSON.parse(responseContent);
 
         // Ensure the response contains the correct structure
         if (!Array.isArray(recommendations) || !recommendations.length) {
@@ -46,6 +52,7 @@ async function getBookRecommendations(topArtists, topGenres) {
         return []; // Return an empty array if there was an error
     }
 }
+
 
 
 
