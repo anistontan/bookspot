@@ -7,6 +7,7 @@ This project was built with Node.js, so it might not work as intended in all env
 ### Prerequisites
 
 - [Node.js](https://nodejs.org/) installed on your machine
+- OpenAI installed on your machine
 
 ### Installation
 
@@ -14,3 +15,4 @@ This project was built with Node.js, so it might not work as intended in all env
    ```bash
    git clone https://github.com/anistonntan/bookspot.git
 2. Add your API keys to the .env file.
+3. Ensure that Project Directory aligns with the codes
